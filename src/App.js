@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#">React-Bootstrap App</Navbar.Brand>
+      </Navbar>
+      <Container>
+        <header className="App-header">
+          {/* Votre logo et contenu existant */}
+        </header>
+        <h1 className="mt-3">Bienvenue dans React-Bootstrap</h1>
+        <Row className="mt-3">
+          <Col>
+            <Card>
+              <Card.Body>Ceci est la Carte 1</Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Body>Ceci est la Carte 2</Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Body>Ceci est la Carte 3</Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
+
 
 export default App;
